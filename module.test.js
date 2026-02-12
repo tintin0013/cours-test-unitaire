@@ -10,9 +10,6 @@ describe("calculateAge Unit Test Suites", () => {
             birth: new Date("1991-07-11"),
         };
 
-        //       const currentYear = new Date().getFullYear();
-        //       const expectedAge = currentYear - 1991;
-        
         const dateDiff = new Date(Date.now() - loise.birth.getTime());
         const expectedAge = Math.abs(dateDiff.getUTCFullYear() - 1970);
 

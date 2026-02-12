@@ -64,7 +64,7 @@
     
 
     
-    <h4 class="name" id="~validateAge"><span class="type-signature">(inner) </span>validateAge<span class="signature">(person)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".validateAge"><span class="type-signature">(static) </span>validateAge<span class="signature">(person)</span><span class="type-signature"></span></h4>
     
 
     
@@ -124,7 +124,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">Object containing at least a birth Date property</td>
         </tr>
 
     
@@ -192,14 +192,28 @@
 
         
 
-    <div class="param-desc">
-    
-        
+<dl>
+    <dt>
+        <div class="param-desc">
+        Throws AGE_UNDER_18 if the person is under 18 years old
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
 <span class="param-type">Error</span>
 
 
-    
-    </div>
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
 
 
     
@@ -216,7 +230,7 @@
     
 
     
-    <h4 class="name" id="~validateEmail"><span class="type-signature">(inner) </span>validateEmail<span class="signature">(email)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".validateEmail"><span class="type-signature">(static) </span>validateEmail<span class="signature">(email)</span><span class="type-signature"></span></h4>
     
 
     
@@ -276,7 +290,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">Email address to validate</td>
         </tr>
 
     
@@ -317,7 +331,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="validator.js.html">validator.js</a>, <a href="validator.js.html#line39">line 39</a>
+        <a href="validator.js.html">validator.js</a>, <a href="validator.js.html#line41">line 41</a>
     </li></ul></dd>
     
 
@@ -344,14 +358,28 @@
 
         
 
-    <div class="param-desc">
-    
-        
+<dl>
+    <dt>
+        <div class="param-desc">
+        Throws INVALID_EMAIL if the format is incorrect
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
 <span class="param-type">Error</span>
 
 
-    
-    </div>
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
 
 
     
@@ -368,7 +396,7 @@
     
 
     
-    <h4 class="name" id="~validateIdentity"><span class="type-signature">(inner) </span>validateIdentity<span class="signature">(value)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".validateIdentity"><span class="type-signature">(static) </span>validateIdentity<span class="signature">(value)</span><span class="type-signature"></span></h4>
     
 
     
@@ -428,7 +456,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">Name or firstname containing only letters, accents or hyphen</td>
         </tr>
 
     
@@ -469,7 +497,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="validator.js.html">validator.js</a>, <a href="validator.js.html#line51">line 51</a>
+        <a href="validator.js.html">validator.js</a>, <a href="validator.js.html#line55">line 55</a>
     </li></ul></dd>
     
 
@@ -496,14 +524,28 @@
 
         
 
-    <div class="param-desc">
-    
-        
+<dl>
+    <dt>
+        <div class="param-desc">
+        Throws INVALID_IDENTITY if the value is empty or contains invalid characters
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
 <span class="param-type">Error</span>
 
 
-    
-    </div>
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
 
 
     
@@ -520,7 +562,7 @@
     
 
     
-    <h4 class="name" id="~validatePostalCode"><span class="type-signature">(inner) </span>validatePostalCode<span class="signature">(code)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id=".validatePostalCode"><span class="type-signature">(static) </span>validatePostalCode<span class="signature">(code)</span><span class="type-signature"></span></h4>
     
 
     
@@ -580,7 +622,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">French postal code to validate (must contain exactly 5 digits)</td>
         </tr>
 
     
@@ -648,19 +690,362 @@
 
         
 
-    <div class="param-desc">
-    
-        
+<dl>
+    <dt>
+        <div class="param-desc">
+        Throws INVALID_POSTAL_CODE if format is incorrect
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
 <span class="param-type">Error</span>
 
 
-    
-    </div>
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
 
 
     
 
 
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".validateUser"><span class="type-signature">(static) </span>validateUser<span class="signature">(user)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Validate a full user object.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>user</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Object representing a user
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>birth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Date of birth used to calculate age</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>postalCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">French postal code (5 digits)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Email address</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>firstname</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">User firstname</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastname</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">User lastname</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="validator.js.html">validator.js</a>, <a href="validator.js.html#line80">line 80</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        Throws an error if any validation fails
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Returns true if all validations pass
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -688,7 +1073,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Fri Feb 06 2026 17:29:13 GMT+0100 (Central European Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Thu Feb 12 2026 16:13:11 GMT+0100 (Central European Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

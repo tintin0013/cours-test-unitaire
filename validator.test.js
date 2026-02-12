@@ -1,9 +1,10 @@
-const {
+import {
     validateAge,
     validatePostalCode,
     validateEmail,
-    validateIdentity
-} = require("./validator");
+    validateIdentity,
+    validateUser
+} from "./validator";
 
 /**
  * Tests unitaires pour les validations
@@ -12,8 +13,11 @@ const {
 describe("validator", () => {
 
     it("should throw an error if age is under 18", () => {
+        const currentYear = new Date().getFullYear();
+        const birthYear = currentYear - 10;
+
         const person = {
-            birth: new Date("2010-01-01")
+            birth: new Date(`${birthYear}-01-01`)
         };
 
         expect(() => {
@@ -22,8 +26,11 @@ describe("validator", () => {
     });
 
     it("should not throw an error if age is 18 or more", () => {
+        const currentYear = new Date().getFullYear();
+        const birthYear = currentYear - 20;
+
         const person = {
-            birth: new Date("1990-01-01")
+            birth: new Date(`${birthYear}-01-01`)
         };
 
         expect(() => {
@@ -92,6 +99,42 @@ describe("validator", () => {
     it("should throw an error if identity is null", () => {
         expect(() => {
             validateIdentity(null);
+        }).toThrow();
+    });
+
+    /**
+     * Tests for validateUser
+     */
+
+    it("should return true if the whole user is valid", () => {
+        const currentYear = new Date().getFullYear();
+        const birthYear = currentYear - 20;
+
+        const user = {
+            birth: new Date(`${birthYear}-01-01`),
+            postalCode: "75001",
+            email: "test@mail.com",
+            firstname: "Jean",
+            lastname: "Dupont"
+        };
+
+        expect(validateUser(user)).toBe(true);
+    });
+
+    it("should throw an error if one field is invalid", () => {
+        const currentYear = new Date().getFullYear();
+        const birthYear = currentYear - 10;
+
+        const user = {
+            birth: new Date(`${birthYear}-01-01`), // under 18
+            postalCode: "75001",
+            email: "test@mail.com",
+            firstname: "Jean",
+            lastname: "Dupont"
+        };
+
+        expect(() => {
+            validateUser(user);
         }).toThrow();
     });
 

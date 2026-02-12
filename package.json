@@ -7,6 +7,16 @@
     "test": "jest --coverage",
     "jsdoc": "jsdoc -c ./jsdoc.config.json -r -d ./docs"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/docs/",
+      "/coverage/"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tintin0013/cours-test-.git"

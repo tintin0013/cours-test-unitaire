@@ -2,12 +2,12 @@
  * Calculate a person's age in years.
  *
  * @param {object} p An object representing a person, implementing a birth Date parameter.
- * @return {number} The age in years of p.
+ * @returns {number} The age in years of p.
  */
-function calculateAge(p) {
+export function calculateAge(p) {
 
     if (!p) {
-        throw new Error("missing param p")
+        throw new Error("missing param p");
     }
 
     if (typeof p !== "object") {
@@ -26,9 +26,19 @@ function calculateAge(p) {
         throw new Error("birth date is invalid");
     }
 
-    let dateDiff = new Date(Date.now() - p.birth.getTime())
-    let age = Math.abs(dateDiff.getUTCFullYear() - 1970);
+    const today = new Date();
+    const birthDate = p.birth;
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    if (
+        monthDiff < 0 ||
+        (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+        age--;
+    }
+
     return age;
 }
-
-export { calculateAge }

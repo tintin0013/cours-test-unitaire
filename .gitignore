@@ -1,0 +1,14 @@
+# Node
+node_modules/
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Logs
+npm-debug.log*
